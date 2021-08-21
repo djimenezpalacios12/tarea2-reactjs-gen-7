@@ -4,13 +4,13 @@ import { Search, LocalMovies } from "@material-ui/icons";
 
 import "./BarStyle.css";
 
-const Bar = ({ filtro }) => {
+const Bar = ({ handleFiltro }) => {
   const [input, setInput] = useState("");
 
   // Submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submit :", input);
+    handleFiltro(input);
   };
 
   // HandleChange

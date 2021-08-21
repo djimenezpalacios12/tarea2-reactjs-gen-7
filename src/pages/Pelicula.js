@@ -5,11 +5,16 @@ import Bar from "../components/Bar/Bar";
 const Pelicula = () => {
   const [filtro, setFiltro] = useState("");
 
+  const handleFiltro = (value) => {
+    setFiltro(value);
+  };
+
+  // TODO: pasar el "filtro" al componente para buscar peliculas
   console.log("Pelicula: ", filtro);
 
   return (
     <Fragment>
-      <Bar filtro={filtro} />
+      <Bar handleFiltro={handleFiltro} />
     </Fragment>
   );
 };
