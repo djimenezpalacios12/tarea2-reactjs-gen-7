@@ -9,7 +9,7 @@ const Pelicula = () => {
     setFiltro(value);
   };
 
-  // TODO: pasar el "filtro" al componente que mostrara las peliculas para buscar peliculas
+  // TODO: pasar el "filtro" al componente o función que mostrara las peliculas filtradas
   console.log("Pelicula: ", filtro);
 
   return (
