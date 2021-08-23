@@ -1,22 +1,27 @@
 import React, { useContext } from "react";
-import {
-  Card,
-  CardHeader,
-  CardMedia,
-  CardContent,
-  Typography,
-} from "@material-ui/core";
+import { Card, CardHeader, CardContent, Typography } from "@material-ui/core";
 
 import { MovieContext } from "../context/movieContext";
 
-const Cartel = () => {
+const Cartel = ({ filtro }) => {
   const { movies } = useContext(MovieContext);
 
+  // Filto de búsqueda
+  const filterMovie = () => {
+    return movies?.filter(
+      (movie) =>
+        !filtro ||
+        movie.original_title.toUpperCase().includes(filtro.toUpperCase())
+    );
+  };
+
+  const filter = filterMovie();
+
   return (
-    <div className="m-3">
+    <div className="m-2">
       <div className="row d-flex justify-content-center">
-        {movies &&
-          movies.map((movie, index) => {
+        {filter &&
+          filter.map((movie, index) => {
             return (
               <div key={index} className="col-12 col-lg-3 m-2">
                 <Card className="">
