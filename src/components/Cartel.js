@@ -12,7 +12,6 @@ import { MovieContext } from "../context/movieContext";
 const Cartel = () => {
   const { movies } = useContext(MovieContext);
 
-  console.log(movies);
   return (
     <div className="m-3">
       <div className="row d-flex justify-content-center">
