@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from "react";
 
 import Bar from "../components/Bar/Bar";
+import Footer from "../components/Footer";
+import Cartel from "../components/Cartel";
 
 const Pelicula = () => {
   const [filtro, setFiltro] = useState("");
@@ -9,12 +11,13 @@ const Pelicula = () => {
     setFiltro(value);
   };
 
-  // TODO: pasar el "filtro" al componente o función que mostrara las peliculas filtradas
-  console.log("Pelicula: ", filtro);
-
   return (
     <Fragment>
       <Bar handleFiltro={handleFiltro} />
+
+      <Cartel filtro={filtro} />
+
+      <Footer />
     </Fragment>
   );
 };

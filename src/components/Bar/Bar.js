@@ -38,6 +38,8 @@ const Bar = ({ handleFiltro }) => {
                 name="filtro"
                 onChange={handleChange}
                 value={input}
+                margin="dense"
+                size="small"
               />
             </div>
           </form>
