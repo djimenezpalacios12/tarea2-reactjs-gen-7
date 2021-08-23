@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, TextField } from "@material-ui/core";
+import { AppBar, Toolbar, TextField } from "@material-ui/core";
 import { Search, LocalMovies } from "@material-ui/icons";
 
 import "./BarStyle.css";
@@ -22,9 +22,9 @@ const Bar = ({ handleFiltro }) => {
     <div>
       <AppBar position="static" className="bg-info">
         <Toolbar className="d-flex justify-content-between">
-          <Typography variant="h6" noWrap>
+          <div className="d-flex align-items-center">
             <LocalMovies /> Cartelera de Películas
-          </Typography>
+          </div>
           <form onSubmit={handleSubmit} className="d-flex align-items-center">
             <div>
               <Search className="mr-3" />

@@ -13,11 +13,14 @@ const Pelicula = () => {
 
   return (
     <Fragment>
-      <Bar handleFiltro={handleFiltro} />
+      {/* //? Verificar so vh-100 no provoca problemas */}
+      <div className="back-color vh-100">
+        <Bar handleFiltro={handleFiltro} />
 
-      <Cartel filtro={filtro} />
+        <Cartel filtro={filtro} />
 
-      <Footer />
+        <Footer />
+      </div>
     </Fragment>
   );
 };
