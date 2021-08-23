@@ -16,7 +16,6 @@ const MovieContextProvider = ({ children }) => {
     fetch(movieSearchAPI())
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.results);
         setMovies(data.results);
       })
       .catch((err) => console.log(err));

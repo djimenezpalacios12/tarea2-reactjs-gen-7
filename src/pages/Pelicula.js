@@ -13,8 +13,7 @@ const Pelicula = () => {
 
   return (
     <Fragment>
-      {/* //? Verificar so vh-100 no provoca problemas */}
-      <div className="back-color vh-100">
+      <div className="back-color">
         <Bar handleFiltro={handleFiltro} />
 
         <Cartel filtro={filtro} />
