@@ -8,7 +8,7 @@
 Tarea 2 del curso de React JS.
 La App muestra y lista una cartelera de películas (Películas más populares), permitiendo tambíen buscar por nombre completo o nombres parcialemnte conocidos.
 
-## technologies
+## Technologies
 
 - ReactJS v17.0.2
 - Material-UI/core v4.12.3
